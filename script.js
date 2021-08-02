@@ -8,6 +8,9 @@ const li0 = document.createElement('li');
 const li1 = document.createElement('li');
 const li2 = document.createElement('li');
 const li3 = document.createElement('li');
+const a0 = document.createElement('a');
+const a1 = document.createElement('a');
+const a2 = document.createElement('a');
 const i0 = document.createElement('i');
 const i1 = document.createElement('i');
 const i2 = document.createElement('i');
@@ -22,19 +25,28 @@ function mobileMenu() {
     section0.append(ul0);
     ul0.append(li0, li1, li2, li3);
     li0.append(i0);
-    li1.append(p0, i1);
-    li2.append(p1, i2);
-    li3.append(p2, i3);
+    li1.append(a0);
+    li2.append(a1);
+    li3.append(a2);
+    a0.append(p0, i1);
+    a1.append(p1, i2);
+    a2.append(p2, i3);
 
     section0.setAttribute('class', 'container mobileMenu');
     li0.setAttribute('class', 'mobilemenuclose');
     i0.setAttribute('class', 'material-icons');
     i0.setAttribute('onclick', 'section0.remove()')
-    li1.setAttribute('class', 'menu_items');
+    a0.setAttribute('class', 'menu_items');
+    a0.setAttribute('href', '#projects');
+    a0.setAttribute('onclick', 'section0.remove()')
     i1.setAttribute('class', 'material-icons');
-    li2.setAttribute('class', 'menu_items');
+    a1.setAttribute('class', 'menu_items');
+    a1.setAttribute('href', '#about');
+    a1.setAttribute('onclick', 'section0.remove()')
     i2.setAttribute('class', 'material-icons');
-    li3.setAttribute('class', 'menu_items');
+    a2.setAttribute('class', 'menu_items');
+    a2.setAttribute('href', '#contact');
+    a2.setAttribute('onclick', 'section0.remove()')
     i3.setAttribute('class', 'material-icons');
 
     i0.textContent = 'close';
