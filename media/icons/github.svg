@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 12.7 12.7"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   sodipodi:docname="drawing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="16.145833"
+     inkscape:cx="23.969032"
+     inkscape:cy="24.030968"
+     inkscape:window-width="2560"
+     inkscape:window-height="1363"
+     inkscape:window-x="1080"
+     inkscape:window-y="48"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:#ffffff"
+       id="g18"
+       transform="matrix(0.26458333,0,0,0.26458333,3.3491327,2.853271)">
+      <path
+         d="m 18.4994,7.61165 c 0,-1.13989 -0.366,-2.21071 -1.0647,-3.14335 0.2661,-0.8981 0.3327,-2.03799 0.2661,-3.3506 -0.0332,-0.55268 -0.4658,-0.967187 -0.9981,-0.967187 -0.2995,0 -2.8281,0.034542 -4.2921,1.381697 -1.2643,-0.2418 -2.59516,-0.2418 -3.89276,0 C 7.08716,0.185055 4.55851,0.150513 4.22579,0.150513 c -0.53235,0 -0.96488,0.414507 -0.99815,0.967187 -0.09981,1.31261 0,2.4525 0.26617,3.3506 -0.6987,0.96719 -1.06469,2.038 -1.06469,3.14335 0,2.41795 1.79667,4.59415 4.52495,5.63045 -0.09981,0.2072 -0.16636,0.449 -0.2329,0.6908 C 3.82653,13.622 2.46239,10.8932 2.39585,10.7895 2.16295,10.2714 1.56405,10.0642 1.06498,10.3405 0.565903,10.5823 0.366272,11.2041 0.632446,11.7222 0.69899,11.8949 2.52893,15.5909 6.55481,16.0054 v 3.1088 c 0,0.5873 0.43254,1.0363 0.99815,1.0363 h 5.82254 c 0.5656,0 0.9982,-0.449 0.9982,-1.0363 v -4.1105 c 0,-0.6218 -0.1331,-1.209 -0.366,-1.7271 2.695,-1.0708 4.4917,-3.2124 4.4917,-5.66495 z"
+         fill="#ffffff"
+         id="path9"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>
