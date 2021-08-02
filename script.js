@@ -46,6 +46,4 @@ function mobileMenu() {
     i3.textContent = 'chevron_right'
 }
 
-mobileMenu();
-
 console.log('Im working!!');
