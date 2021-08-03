@@ -15,10 +15,10 @@
       <p class="logo"><a href="index.html">Portfolio</a></p>
       <p class="logo"><a href="index.html">About</a></p>
       <p class="logo"><a href="index.html">Contact</a></p>
-      <i class="material-icons">menu</i>
+      <i onclick=mobileMenu() class="material-icons" id="mobileMenuButton">menu</i>
       <i class="material-icons">email</i>
     </header>
-    <main>
+    <main id="main">
       <section class="container head">
         <h1>Alex Hamn</h1>
         <p class="subtitle">Software Developer</p>
@@ -28,7 +28,7 @@
           you need coded, don’t hestiate to contact me.
         </p>
       </section>
-      <section class="container skills">
+      <section class="container skills" id="about">
         <ul>
           <li class="title">Language</li>
           <li>Javascript</li>
@@ -81,7 +81,7 @@
         </ul>
         <h4>↓ Work</h4>
       </section>
-      <section class="grid projects">
+      <section class="grid projects" id="projects">
         <div>
           <h2>
             MY RECENT WORK
@@ -160,7 +160,7 @@
           </div>
         </article>
       </section>
-      <section class="container contact">
+      <section class="container contact" id="contact">
         <h2>CONTACT US</h2>
         <h2>Let's chat!</h2>
         <p> 
@@ -214,5 +214,6 @@
         <p>emailhere@email.com</p>
       </footer>
     </main>
+    <script src="script.js" type="text/javascript" ></script>
   </body>
 </html>
