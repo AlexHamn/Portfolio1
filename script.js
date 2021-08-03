@@ -1,6 +1,6 @@
 let mobileMenuButton = document.getElementById('mobileMenu');
 let header = document.querySelector('head');
-const main = document.body;
+const body = document.body;
 
 const section0 = document.createElement('section');
 const ul0 = document.createElement('ul');
@@ -21,7 +21,7 @@ const p2 = document.createElement('p');
 
 function mobileMenu() {
 
-    main.append(section0);
+    body.append(section0);
     section0.append(ul0);
     ul0.append(li0, li1, li2, li3);
     li0.append(i0);
@@ -56,6 +56,69 @@ function mobileMenu() {
     i2.textContent = 'chevron_right'
     p2.textContent = 'Contact';
     i3.textContent = 'chevron_right'
+}
+
+let content = {
+    titles : [
+    'Multi-post story',
+    'Multi-post story',
+    'Multi-post story',
+    'Multi-post story'],
+
+    descriptions : [
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.'],
+
+    images : [
+    'https://picsum.photos/684/448?grayscale',
+    'https://picsum.photos/684/448?grayscale',
+    'https://picsum.photos/684/448?grayscale',
+    'https://picsum.photos/684/448?grayscale']
+}
+
+
+
+function project(title, description, image) {
+    const section = document.getElementById('projects');
+    const article = document.createElement('article');
+    const img = document.createElement('img');
+    const div = document.createElement('div');
+    const h3 = document.createElement('h3');
+    const p = document.createElement('p');
+    const ul = document.createElement('ul');
+    const li0 = document.createElement('li');
+    const li1 = document.createElement('li');
+    const li2 = document.createElement('li');
+    const li3 = document.createElement('li');
+    const button = document.createElement('button');
+
+    section.append(article);
+    article.append(img, div);
+    div.append(h3, p, ul, button);
+    ul.append(li0, li1, li2, li3);
+
+    article.setAttribute('class', 'container project');
+    img.setAttribute('src', image);
+    img.setAttribute('alt', 'placeholder');
+    div.setAttribute('class', 'container project-text');
+    ul.setAttribute('class', 'container languages');
+
+    h3.textContent = title;
+    p.textContent = description;
+    li0.textContent = 'css';
+    li1.textContent = 'html';
+    li2.textContent = 'bootstrap';
+    li3.textContent = 'Ruby';
+    button.textContent = 'See Project';
+
+    console.log(title);
+
+}
+
+for (let i = 0; i < content.titles.length; i++) {
+    project(content.titles[i], content.descriptions[i], content.images[i]);
 }
 
 console.log('Im working!!');
