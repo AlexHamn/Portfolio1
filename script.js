@@ -78,9 +78,7 @@ let content = {
     'https://picsum.photos/684/448?grayscale']
 }
 
-
-
-function project(title, description, image) {
+function project(title, description, image, id) {
     const section = document.getElementById('projects');
     const article = document.createElement('article');
     const img = document.createElement('img');
@@ -104,6 +102,8 @@ function project(title, description, image) {
     img.setAttribute('alt', 'placeholder');
     div.setAttribute('class', 'container project-text');
     ul.setAttribute('class', 'container languages');
+    button.setAttribute('id', id);
+    button.setAttribute('onclick', 'popUp(this.id)')
 
     h3.textContent = title;
     p.textContent = description;
@@ -113,12 +113,70 @@ function project(title, description, image) {
     li3.textContent = 'Ruby';
     button.textContent = 'See Project';
 
-    console.log(title);
-
 }
 
 for (let i = 0; i < content.titles.length; i++) {
-    project(content.titles[i], content.descriptions[i], content.images[i]);
+    project(content.titles[i], content.descriptions[i], content.images[i], i);
+}
+
+const container = document.createElement('article');
+const description = document.createElement('p');
+const seeLive = document.createElement('p');
+const seeSource = document.createElement('p');
+const close = document.createElement('i');
+const tech = document.createElement('ul');
+const tech0 = document.createElement('li');
+const tech1 = document.createElement('li');
+const tech2 = document.createElement('li');
+const live = document.createElement('i');
+const div0 = document.createElement('div');
+const div1 = document.createElement('div');
+const div2 = document.createElement('div');
+const h3 = document.createElement('h3');
+const img0 = document.createElement('img');
+const img1 = document.createElement('img');
+const button0 = document.createElement('button');
+const button1 = document.createElement('button');
+const liveLink = document.createElement('a');
+const sourceLink = document.createElement('a');
+
+function popUp(id) {
+    body.append(container);
+    container.append(div0);
+    div0.append(div1, img0, description, tech, div2);
+    div1.append(h3, close);
+    tech.append(tech0, tech1, tech2);
+    div2.append(liveLink, sourceLink);
+    liveLink.append(button0);
+    button0.append(seeLive, live);
+    sourceLink.append(button1);
+    button1.append(seeSource, img1);
+    
+    container.setAttribute('class', 'container popUpWindow');
+    div0.setAttribute('class', 'popUpProject');
+    div1.setAttribute('class', 'container popUpHead');
+    close.setAttribute('class', 'material-icons');
+    close.setAttribute('onclick', 'container.remove()')
+    img0.setAttribute('class', 'popUpImg');
+    img0.setAttribute('src', content.images[id]);
+    img0.setAttribute('alt', 'portfolio picture');
+    description.setAttribute('class', 'pop_description');
+    tech.setAttribute('class', 'container languages');
+    div2.setAttribute('class', 'container popUpButtons');
+    liveLink.setAttribute('href', 'https://github.com/AlexHamn/Portfolio1');
+    live.setAttribute('class', 'material-icons');
+    sourceLink.setAttribute('href', 'https://github.com/AlexHamn/Portfolio1');
+    img1.setAttribute('src', './media/icons/github.svg');
+
+    h3.textContent = content.titles[id];
+    close.textContent = 'close';
+    description.textContent = content.descriptions[id];
+    tech0.textContent = 'html';
+    tech1.textContent = 'Ruby on rails';
+    tech2.textContent = 'css';
+    seeLive.textContent = 'See Live';
+    live.textContent = 'stream';
+    seeSource.textContent = 'See Source';
 }
 
 console.log('Im working!!');
