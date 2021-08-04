@@ -421,11 +421,6 @@ footer > p {
   margin-left: unset;
 }
 
-.navigation > p:not(:first-of-type),
-i:not(:first-of-type) {
-  display: none;
-}
-
 .popUpWindow {
   backdrop-filter: blur(300px);
   position: fixed;
@@ -496,25 +491,12 @@ i:not(:first-of-type) {
   height: 50%;
 }
 
+.navigation > p:not(:first-of-type),
+i:not(:first-of-type) {
+  display: none;
+}
+
 @media screen and (min-device-width: 1200px) {
-  .pop_description {
-    max-width: 60%;
-    margin-left: 20%;
-    text-align: justify;
-  }
-
-  .popUpButtons {
-    flex-direction: row;
-  }
-
-  .popUpButtons a button {
-    margin: 3em;
-  }
-
-  .popUpButtons a button:last-of-type {
-    margin-top: 3em;
-  }
-
   footer > p {
     display: none;
   }
@@ -630,6 +612,24 @@ i:not(:first-of-type) {
 
   form ul li:last-child {
     text-align: center;
+  }
+
+  .pop_description {
+    max-width: 60%;
+    margin-left: 20%;
+    text-align: justify;
+  }
+
+  .popUpButtons {
+    flex-direction: row;
+  }
+
+  .popUpButtons a button {
+    margin: 3em;
+  }
+
+  .popUpButtons a button:last-of-type {
+    margin-top: 3em;
   }
 
   .contact > p {
