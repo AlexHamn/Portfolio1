@@ -171,6 +171,7 @@ label {
   justify-content: center;
   border-bottom: transparent;
   background: none;
+  margin-bottom: 1em;
 }
 
 .languages > * {

@@ -1,6 +1,4 @@
-let mobileMenuButton = document.getElementById('mobileMenu');
-let header = document.querySelector('head');
-const body = document.body;
+const { body } = document;
 
 const section0 = document.createElement('section');
 const ul0 = document.createElement('ul');
@@ -20,103 +18,160 @@ const p1 = document.createElement('p');
 const p2 = document.createElement('p');
 
 function mobileMenu() {
+  body.append(section0);
+  section0.append(ul0);
+  ul0.append(li0, li1, li2, li3);
+  li0.append(i0);
+  li1.append(a0);
+  li2.append(a1);
+  li3.append(a2);
+  a0.append(p0, i1);
+  a1.append(p1, i2);
+  a2.append(p2, i3);
 
-    body.append(section0);
-    section0.append(ul0);
-    ul0.append(li0, li1, li2, li3);
-    li0.append(i0);
-    li1.append(a0);
-    li2.append(a1);
-    li3.append(a2);
-    a0.append(p0, i1);
-    a1.append(p1, i2);
-    a2.append(p2, i3);
+  section0.setAttribute('class', 'container mobileMenu');
+  li0.setAttribute('class', 'mobilemenuclose');
+  i0.setAttribute('class', 'material-icons');
+  i0.setAttribute('onclick', 'section0.remove()');
+  a0.setAttribute('class', 'menu_items');
+  a0.setAttribute('href', '#projects');
+  a0.setAttribute('onclick', 'section0.remove()');
+  i1.setAttribute('class', 'material-icons');
+  a1.setAttribute('class', 'menu_items');
+  a1.setAttribute('href', '#about');
+  a1.setAttribute('onclick', 'section0.remove()');
+  i2.setAttribute('class', 'material-icons');
+  a2.setAttribute('class', 'menu_items');
+  a2.setAttribute('href', '#contact');
+  a2.setAttribute('onclick', 'section0.remove()');
+  i3.setAttribute('class', 'material-icons');
 
-    section0.setAttribute('class', 'container mobileMenu');
-    li0.setAttribute('class', 'mobilemenuclose');
-    i0.setAttribute('class', 'material-icons');
-    i0.setAttribute('onclick', 'section0.remove()')
-    a0.setAttribute('class', 'menu_items');
-    a0.setAttribute('href', '#projects');
-    a0.setAttribute('onclick', 'section0.remove()')
-    i1.setAttribute('class', 'material-icons');
-    a1.setAttribute('class', 'menu_items');
-    a1.setAttribute('href', '#about');
-    a1.setAttribute('onclick', 'section0.remove()')
-    i2.setAttribute('class', 'material-icons');
-    a2.setAttribute('class', 'menu_items');
-    a2.setAttribute('href', '#contact');
-    a2.setAttribute('onclick', 'section0.remove()')
-    i3.setAttribute('class', 'material-icons');
-
-    i0.textContent = 'close';
-    p0.textContent = 'Portfolio';
-    i1.textContent = 'chevron_right'
-    p1.textContent = 'About';
-    i2.textContent = 'chevron_right'
-    p2.textContent = 'Contact';
-    i3.textContent = 'chevron_right'
+  i0.textContent = 'close';
+  p0.textContent = 'Portfolio';
+  i1.textContent = 'chevron_right';
+  p1.textContent = 'About';
+  i2.textContent = 'chevron_right';
+  p2.textContent = 'Contact';
+  i3.textContent = 'chevron_right';
 }
 
-let content = {
-    titles : [
-    'Multi-post story',
-    'Multi-post story',
-    'Multi-post story',
-    'Multi-post story'],
-
-    descriptions : [
-    'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
-    'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
-    'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
-    'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.'],
-
-    images : [
-    'https://picsum.photos/684/448?grayscale',
-    'https://picsum.photos/684/448?grayscale',
-    'https://picsum.photos/684/448?grayscale',
-    'https://picsum.photos/684/448?grayscale']
+function Project(title, description, image, tech0, tech1, tech2, tech3, liveLink, sourceLink) {
+  this.title = title;
+  this.description = description;
+  this.image = image;
+  this.tech0 = tech0;
+  this.tech1 = tech1;
+  this.tech2 = tech2;
+  this.tech3 = tech3;
+  this.liveLink = liveLink;
+  this.sourceLink = sourceLink;
 }
 
-function project(title, description, image, id) {
-    const section = document.getElementById('projects');
-    const article = document.createElement('article');
-    const img = document.createElement('img');
-    const div = document.createElement('div');
-    const h3 = document.createElement('h3');
-    const p = document.createElement('p');
-    const ul = document.createElement('ul');
-    const li0 = document.createElement('li');
-    const li1 = document.createElement('li');
-    const li2 = document.createElement('li');
-    const li3 = document.createElement('li');
-    const button = document.createElement('button');
+const project0 = new Project(
+  'Multi-post story',
+  'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+  'https://picsum.photos/684/448?grayscale',
+  'html',
+  'Ruby on rails',
+  'css',
+  'Bootstrap',
+  'https://github.com/AlexHamn/Portfolio1',
+  'https://github.com/AlexHamn/Portfolio1',
+);
 
-    section.append(article);
-    article.append(img, div);
-    div.append(h3, p, ul, button);
-    ul.append(li0, li1, li2, li3);
+const project1 = new Project(
+  'Multi-post story',
+  'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+  'https://picsum.photos/684/448?grayscale',
+  'html',
+  'Ruby on rails',
+  'css',
+  'Bootstrap',
+  'https://github.com/AlexHamn/Portfolio1',
+  'https://github.com/AlexHamn/Portfolio1',
+);
 
-    article.setAttribute('class', 'container project');
-    img.setAttribute('src', image);
-    img.setAttribute('alt', 'placeholder');
-    div.setAttribute('class', 'container project-text');
-    ul.setAttribute('class', 'container languages');
-    button.setAttribute('id', id);
-    button.setAttribute('onclick', 'popUp(this.id)')
+const project2 = new Project(
+  'Multi-post story',
+  'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+  'https://picsum.photos/684/448?grayscale',
+  'html',
+  'Ruby on rails',
+  'css',
+  'Bootstrap',
+  'https://github.com/AlexHamn/Portfolio1',
+  'https://github.com/AlexHamn/Portfolio1',
+);
 
-    h3.textContent = title;
-    p.textContent = description;
-    li0.textContent = 'css';
-    li1.textContent = 'html';
-    li2.textContent = 'bootstrap';
-    li3.textContent = 'Ruby';
-    button.textContent = 'See Project';
+const project3 = new Project(
+  'Multi-post story',
+  'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+  'https://picsum.photos/684/448?grayscale',
+  'html',
+  'Ruby on rails',
+  'css',
+  'Bootstrap',
+  'https://github.com/AlexHamn/Portfolio1',
+  'https://github.com/AlexHamn/Portfolio1',
+);
 
+const projects = [project0, project1, project2, project3];
+const titles = [];
+const descriptions = [];
+const images = [];
+const tech0s = [];
+const tech1s = [];
+const tech2s = [];
+const tech3s = [];
+const liveLinks = [];
+const sourceLinks = [];
+
+for (let i = 0; i < projects.length; i += 1) {
+  titles.push(projects[i].title);
+  descriptions.push(projects[i].description);
+  images.push(projects[i].image);
+  tech0s.push(projects[i].tech0);
+  tech1s.push(projects[i].tech1);
+  tech2s.push(projects[i].tech2);
+  tech3s.push(projects[i].tech3);
+  liveLinks.push(projects[i].liveLink);
+  sourceLinks.push(projects[i].sourceLink);
 }
 
-for (let i = 0; i < content.titles.length; i++) {
-    project(content.titles[i], content.descriptions[i], content.images[i], i);
+function displayProject(title, description, image, tech0, tech1, tech2, tech3, id) {
+  const section = document.getElementById('projects');
+  const article = document.createElement('article');
+  const img = document.createElement('img');
+  const div = document.createElement('div');
+  const h3 = document.createElement('h3');
+  const p = document.createElement('p');
+  const ul = document.createElement('ul');
+  const li0 = document.createElement('li');
+  const li1 = document.createElement('li');
+  const li2 = document.createElement('li');
+  const li3 = document.createElement('li');
+  const button = document.createElement('button');
+
+  section.append(article);
+  article.append(img, div);
+  div.append(h3, p, ul, button);
+  ul.append(li0, li1, li2, li3);
+
+  article.setAttribute('class', 'container project');
+  img.setAttribute('src', image);
+  img.setAttribute('alt', 'placeholder');
+  div.setAttribute('class', 'container project-text');
+  ul.setAttribute('class', 'container languages');
+  button.setAttribute('id', id);
+  button.setAttribute('onclick', 'popUp(this.id)');
+
+  h3.textContent = title;
+  p.textContent = description;
+  li0.textContent = tech0;
+  li1.textContent = tech1;
+  li2.textContent = tech2;
+  li3.textContent = tech3;
+  button.textContent = 'See Project';
 }
 
 const container = document.createElement('article');
@@ -141,42 +196,57 @@ const liveLink = document.createElement('a');
 const sourceLink = document.createElement('a');
 
 function popUp(id) {
-    body.append(container);
-    container.append(div0);
-    div0.append(div1, img0, description, tech, div2);
-    div1.append(h3, close);
-    tech.append(tech0, tech1, tech2);
-    div2.append(liveLink, sourceLink);
-    liveLink.append(button0);
-    button0.append(seeLive, live);
-    sourceLink.append(button1);
-    button1.append(seeSource, img1);
-    
-    container.setAttribute('class', 'container popUpWindow');
-    div0.setAttribute('class', 'popUpProject');
-    div1.setAttribute('class', 'container popUpHead');
-    close.setAttribute('class', 'material-icons');
-    close.setAttribute('onclick', 'container.remove()')
-    img0.setAttribute('class', 'popUpImg');
-    img0.setAttribute('src', content.images[id]);
-    img0.setAttribute('alt', 'portfolio picture');
-    description.setAttribute('class', 'pop_description');
-    tech.setAttribute('class', 'container languages');
-    div2.setAttribute('class', 'container popUpButtons');
-    liveLink.setAttribute('href', 'https://github.com/AlexHamn/Portfolio1');
-    live.setAttribute('class', 'material-icons');
-    sourceLink.setAttribute('href', 'https://github.com/AlexHamn/Portfolio1');
-    img1.setAttribute('src', './media/icons/github.svg');
+  body.append(container);
+  container.append(div0);
+  div0.append(div1, img0, description, tech, div2);
+  div1.append(h3, close);
+  tech.append(tech0, tech1, tech2);
+  div2.append(liveLink, sourceLink);
+  liveLink.append(button0);
+  button0.append(seeLive, live);
+  sourceLink.append(button1);
+  button1.append(seeSource, img1);
 
-    h3.textContent = content.titles[id];
-    close.textContent = 'close';
-    description.textContent = content.descriptions[id];
-    tech0.textContent = 'html';
-    tech1.textContent = 'Ruby on rails';
-    tech2.textContent = 'css';
-    seeLive.textContent = 'See Live';
-    live.textContent = 'stream';
-    seeSource.textContent = 'See Source';
+  container.setAttribute('class', 'container popUpWindow');
+  div0.setAttribute('class', 'popUpProject');
+  div1.setAttribute('class', 'container popUpHead');
+  close.setAttribute('class', 'material-icons');
+  close.setAttribute('onclick', 'container.remove()');
+  img0.setAttribute('class', 'popUpImg');
+  img0.setAttribute('src', images[id]);
+  img0.setAttribute('alt', 'portfolio picture');
+  description.setAttribute('class', 'pop_description');
+  tech.setAttribute('class', 'container languages');
+  div2.setAttribute('class', 'container popUpButtons');
+  liveLink.setAttribute('href', liveLinks[id]);
+  live.setAttribute('class', 'material-icons');
+  sourceLink.setAttribute('href', sourceLinks[id]);
+  img1.setAttribute('src', './media/icons/github.svg');
+
+  h3.textContent = titles[id];
+  close.textContent = 'close';
+  description.textContent = descriptions[id];
+  tech0.textContent = tech0s[id];
+  tech1.textContent = tech1s[id];
+  tech2.textContent = tech2s[id];
+  seeLive.textContent = 'See Live';
+  live.textContent = 'stream';
+  seeSource.textContent = 'See Source';
 }
 
-console.log('Im working!!');
+for (let i = 0; i < titles.length; i += 1) {
+  displayProject(
+    titles[i],
+    descriptions[i],
+    images[i],
+    tech0s[i],
+    tech1s[i],
+    tech2s[i],
+    tech3s[i],
+    i,
+  );
+  if (i === 999) {
+    mobileMenu();
+    popUp();
+  }
+}
