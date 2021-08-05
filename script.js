@@ -234,6 +234,33 @@ function popUp(id) {
   seeSource.textContent = 'See Source';
 }
 
+const form = document.querySelector('form');
+
+function validation() {
+  const mail = document.getElementById('mail').value;
+  const error = document.getElementById('error');
+  const pattern = /[A-Z]/;
+
+  if (mail.match(pattern)) {
+    error.innerText = 'email must be in lower case';
+  } else {
+    error.innerText = 'you\'re cool';
+  }
+}
+
+form.addEventListener('submit', (e) => {
+  const mail = document.getElementById('mail').value;
+  const error = document.getElementById('error');
+  const pattern = /[A-Z]/;
+
+  if (mail.match(pattern)) {
+    error.innerText = 'email must be in lower case';
+    e.preventDefault();
+  } else {
+    error.innerText = 'you\'re cool';
+  }
+});
+
 for (let i = 0; i < titles.length; i += 1) {
   displayProject(
     titles[i],
@@ -248,5 +275,6 @@ for (let i = 0; i < titles.length; i += 1) {
   if (i === 999) {
     mobileMenu();
     popUp();
+    validation();
   }
 }
