@@ -234,23 +234,29 @@ function popUp(id) {
   seeSource.textContent = 'See Source';
 }
 
-var getname=document.getElementById("name")
-var getemail=document.getElementById("mail")
-var getmsg=document.getElementById("msg")
-function check_storage() {
-  if (typeof(Storage) !== "undefined") {
-    localStorage.setItem("Name", getname.value);
-    localStorage.setItem("E-mail", getemail.value)
-    localStorage.setItem("Message", getmsg.value)    
-  } else {
-    console.log('Sorry! No Web Storage support..')
-  }
+const getname = document.getElementById('name');
+const getemail = document.getElementById('mail');
+const getmsg = document.getElementById('msg');
+
+function Stored(name, mail, message) {
+  this.name = name;
+  this.mail = mail;
+  this.message = message;
 }
-console.log(localStorage)
-function prefill_form() {
-    getname.value=localStorage.getItem("Name");
-    getemail.value=localStorage.getItem("E-mail")
-    getmsg.value=localStorage.getItem("Message")
+
+let data = 0;
+
+function addToStorage() {
+  data = new Stored(getname.value, getemail.value, getmsg.value);
+  data = JSON.stringify(data);
+  localStorage.setItem('data', data);
+}
+
+function prefillForm() {
+  data = JSON.parse(localStorage.data);
+  getname.value = data.name;
+  getemail.value = data.mail;
+  getmsg.value = data.message;
 }
 
 const form = document.querySelector('form');
@@ -295,7 +301,10 @@ for (let i = 0; i < titles.length; i += 1) {
     mobileMenu();
     popUp();
     validation();
+    addToStorage();
   }
 }
 
-prefill_form();
+if (localStorage !== null) {
+  prefillForm();
+}
