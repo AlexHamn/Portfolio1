@@ -234,6 +234,25 @@ function popUp(id) {
   seeSource.textContent = 'See Source';
 }
 
+var getname=document.getElementById("name")
+var getemail=document.getElementById("mail")
+var getmsg=document.getElementById("msg")
+function check_storage() {
+  if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("Name", getname.value);
+    localStorage.setItem("E-mail", getemail.value)
+    localStorage.setItem("Message", getmsg.value)    
+  } else {
+    console.log('Sorry! No Web Storage support..')
+  }
+}
+console.log(localStorage)
+function prefill_form() {
+    getname.value=localStorage.getItem("Name");
+    getemail.value=localStorage.getItem("E-mail")
+    getmsg.value=localStorage.getItem("Message")
+}
+
 const form = document.querySelector('form');
 
 function validation() {
@@ -278,3 +297,5 @@ for (let i = 0; i < titles.length; i += 1) {
     validation();
   }
 }
+
+prefill_form();
