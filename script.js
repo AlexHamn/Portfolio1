@@ -234,6 +234,31 @@ function popUp(id) {
   seeSource.textContent = 'See Source';
 }
 
+const getname = document.getElementById('name');
+const getemail = document.getElementById('mail');
+const getmsg = document.getElementById('msg');
+
+function Stored(name, mail, message) {
+  this.name = name;
+  this.mail = mail;
+  this.message = message;
+}
+
+let data = 0;
+
+function addToStorage() {
+  data = new Stored(getname.value, getemail.value, getmsg.value);
+  data = JSON.stringify(data);
+  localStorage.setItem('data', data);
+}
+
+function prefillForm() {
+  data = JSON.parse(localStorage.data);
+  getname.value = data.name;
+  getemail.value = data.mail;
+  getmsg.value = data.message;
+}
+
 const form = document.querySelector('form');
 
 function validation() {
@@ -276,5 +301,10 @@ for (let i = 0; i < titles.length; i += 1) {
     mobileMenu();
     popUp();
     validation();
+    addToStorage();
   }
+}
+
+if (localStorage !== null) {
+  prefillForm();
 }
