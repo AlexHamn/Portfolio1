@@ -68,15 +68,15 @@ function Project(title, description, image, tech0, tech1, tech2, tech3, liveLink
 }
 
 const project0 = new Project(
-  'Multi-post story',
-  'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
-  'https://picsum.photos/684/448?grayscale',
-  'html',
-  'Ruby on rails',
-  'css',
+  'minimalist',
+  'A website that allows users to add/remove tasks from a list.',
+  './media/projects/minimalist.png',
+  'HTML',
+  'JavaScript',
+  'CSS',
   'Bootstrap',
-  'https://github.com/AlexHamn/Portfolio1',
-  'https://github.com/AlexHamn/Portfolio1',
+  'https://alexhamn.github.io/To_Do_List_1/',
+  'https://github.com/AlexHamn/To_Do_List_1',
 );
 
 const project1 = new Project(

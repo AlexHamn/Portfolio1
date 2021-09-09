@@ -38,7 +38,7 @@ label {
   animation-name: rotate;
 }
 
-@keyframes rotate {
+/* @keyframes rotate {
   from {
     transform: rotate(0);
   }
@@ -47,7 +47,7 @@ label {
     transform: rotate(360deg);
     font-size: 20px;
   }
-}
+} */
 
 .container {
   display: flex;
@@ -556,9 +556,8 @@ i:not(:first-of-type) {
   .project {
     width: 85%;
     margin: unset;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-self: center;
+    flex-direction: row;<p>"Hello! Sharing world"</p>
+            <h1>CREATIVE COMMONS GLOBAL SUMMIT 2015</h1>
   }
 
   .project > * {
